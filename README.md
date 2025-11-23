@@ -1,125 +1,157 @@
-🎧 Spotify Music Analytics using SQL & PostgreSQL
-📌 Project Overview
+# 🎧 Spotify Music Analytics using SQL & PostgreSQL
 
-This project analyzes 114,000+ global Spotify tracks using PostgreSQL to extract business-driven insights about popularity trends, audio features, artists, and genre performance.
-The goal is to understand what makes a hit song and how music streaming success is influenced by characteristics like tempo, loudness, duration, mood, and explicit content.
+## 📌 Project Overview
 
-🛠️ Tools & Technologies Used
-Tool	Purpose
-PostgreSQL	Data analysis using SQL
-Excel / Power BI	Interactive Dashboard (to be added)
-GitHub	Version control & portfolio showcase
-📂 Dataset Details
+This project analyzes **114,000+ global Spotify tracks** using **PostgreSQL** to uncover insights about popularity trends, genres, artists, audio features, explicit content, and streaming performance.
 
-Name: Spotify Tracks Dataset
+The goal is to identify **what makes a hit song** and provide business recommendations for the music industry using data-driven decisions.
 
-Records: 114k+ songs
+---
 
-Columns: 20 attributes
+## 🛠️ Tools & Technologies Used
 
-Key fields: Popularity, Genre, Artists, Duration, Danceability, Energy, Tempo, Explicit, Valence, Loudness
+| Tool                             | Purpose                               |
+| -------------------------------- | ------------------------------------- |
+| PostgreSQL                       | Data storage & SQL analytics          |
+| VS Code / DBeaver / pgAdmin      | Query execution & development         |
+| Excel / Power BI *(coming soon)* | Interactive dashboard & visualization |
+| Git & GitHub                     | Version control & portfolio showcase  |
 
-Dataset Source: Kaggle
-(Spotify Tracks — Global Music Data)
+---
 
-📊 Key Business Questions Solved
-🎶 Popularity & Streaming Analysis
+## 📂 Dataset Details
 
-✔ Top 10 most popular tracks globally
-✔ Popularity distribution by genres
-✔ Most viral artists
+* Source: Kaggle — *Spotify Tracks Dataset*
+* Total records: **114,000+ songs**
+* 20 audio & metadata attributes
 
-🎧 Genre Insights
+Key columns include:
+✔ Popularity
+✔ Genres
+✔ Artist names
+✔ Duration (ms)
+✔ Explicit flag
+✔ Danceability, Energy, Loudness
+✔ Valence (musical mood)
+✔ Tempo (BPM)
 
-✔ Genres with highest popularity
-✔ Happiest / Energetic / Calmest genres
-✔ Fastest tempo genres
+---
 
-👑 Artist Performance Insights
+## 📊 Analytical Focus Areas
 
-✔ Top artists by volume and popularity
-✔ Danceability, loudness & mood comparison
+The insights are divided into multiple domains:
 
-🔊 Audio Feature Correlations
+### 1️⃣ Popularity Insights
 
-✔ Popularity vs Danceability
-✔ Popularity vs Loudness
-✔ Popularity vs Valence (mood)
-✔ Mode analysis (minor vs major)
+* Top 10 global hits
+* Viral vs unpopular music distribution
+* Top trending albums
 
-✔ Found that medium danceability, medium loudness, and low valence (emotional) songs perform best.
+### 2️⃣ Genre Analysis
 
-🚫 Explicit Content Insights
+* Highest performing genres by popularity
+* Calmest vs most energetic genres
+* Fastest tempo genres
 
-✔ Only 8.55% songs are explicit
-✔ Explicit songs show slightly higher popularity
+### 3️⃣ Artist Performance
 
-⏱ Duration & Tempo Optimization
+* Most frequent artists in top charts
+* Best danceable / energetic artists
+* Loudest vs happiest audio profiles
 
-✔ Radio-friendly length: 2.5 – 4 minutes
-✔ Fast tempo (>120 BPM) performs best
+### 4️⃣ Audio Feature Correlations
 
-🧠 Final Business Recommendations
-Factor	Ideal for a Hit Song	Reason
-Duration	2.5–4 minutes	Playlist & radio optimal
-Tempo	90–120+ BPM	Higher engagement
-Danceability	Medium–High	Better listener retention
-Loudness	Moderately loud	Balanced excitement
-Mood (Valence)	Slightly emotional	Higher viral potential
-Explicit Content	Low	Wider listenership
+* Popularity vs Danceability
+* Popularity vs Loudness
+* Popularity vs Valence (happiness)
+* Major vs Minor musical mode
 
-Music with high energy, emotional themes, and radio-friendly length performs best on Spotify.
+### 5️⃣ Explicit Content Impact
 
-📌 What I Learned
+* % of explicit content
+* Popularity comparison
+* Genres with explicit dominance
 
-✔ Complex SQL (CTE, Window Functions, Aggregations, CASE)
-✔ Data cleaning & transformation
-✔ Music analytics & commercial storytelling
-✔ Dashboard design for business use
-✔ GitHub-style project documentation
+### 6️⃣ Duration & Tempo Influence
 
-📷 Dashboard (Coming Soon)
+* Best performing song length
+* Tempo category performance
 
-📁 /dashboard/Spotify_Dashboard.xlsx
-📌 Will include:
+---
 
-Genre performance visuals
+## 📌 Project Structure
 
-Artist insights
-
-Audio-feature charts
-
-KPIs and slicers
-
-📁 Project Structure
+```
 Spotify-SQL-Analytics-Project/
 │
-├── data/
-│   └── spotify.csv
-├── queries/
-│   └── spotify_analysis.sql
-├── dashboard/
-│   └── Spotify_Dashboard.xlsx (coming soon)
+├── README.md
 ├── insights/
 │   └── business_insights.md
-└── README.md
+├── queries/
+│   └── spotify_analysis.sql
+├── data/
+│   └── spotify.csv  (optional - size limit)
+└── dashboard/
+    └── Spotify_Dashboard.xlsx (coming soon)
+```
 
-🚀 Future Enhancements
+---
 
-Machine Learning model to predict song popularity
+## 🚦 Key Insights Summary
 
-Spotify Web API integration for real-time analysis
+✔ **2.5 – 4 minutes** = perfect hit-song duration
+✔ **Fast tempo (>120 BPM)** songs ranked highest
+✔ Medium **danceability, loudness & energy** drive engagement
+✔ Emotional songs (**low valence**) attract more streams
+✔ Explicit songs show slightly higher popularity but limited radio reach
+✔ Pop, K-Pop, and Chill dominate global streaming
 
-Deployment with dashboards and APIs
+> 🎯 *Hit songs = Danceable + Emotional + Radio-Friendly Length*
 
-🙋‍♂️ Author
+---
 
-Vedang Doley
-Aspiring Data Scientist | PostgreSQL | Python | Analytics
-📍 India
-🔗 LinkedIn (Will add link later)
+## 🚀 Final Business Recommendations
 
-⭐ Support
+| Area              | Recommendation                       | Why                             |
+| ----------------- | ------------------------------------ | ------------------------------- |
+| Content creation  | Make 3-min, high-energy songs        | Better for playlists & virality |
+| Playlist strategy | Promote emotional + danceable tracks | High audience engagement        |
+| Artist marketing  | Leverage cross-genre collabs         | Strong chart performance        |
+| Market expansion  | Boost Latin & Indian genre promotion | Growing niche audiences         |
+| Explicit content  | Minimize for commercial releases     | Broader listener base           |
 
-If you like this project, please ⭐ the repository!
-It helps others discover it 🙌
+---
+
+## 📈 Dashboard *(Coming Soon)*
+
+A visual dashboard summarizing:
+
+* Popular genres
+* Artist trends
+* Audio-feature distributions
+* Popularity KPIs
+
+Will be added inside `/dashboard` folder.
+
+---
+
+## 🧠 Learning Outcomes
+
+* Advanced SQL (Window Functions, CTEs, Aggregations, CASE)
+* Business analytics & actionable storytelling
+* Handling large datasets
+* Git-based project workflow
+
+---
+
+## 📌 Author
+
+**Vedang Doley**
+Aspiring Data Scientist | Data Analytics | SQL | ML
+
+🔗 GitHub: *https://github.com/vedang2504*
+🔗 LinkedIn: *https://www.linkedin.com/in/vedang-doley-5a7b4b265/*
+
+---
+
+If you found this project helpful, please ⭐ the repository! 🙌
